@@ -1,12 +1,22 @@
+let posVertical;
+
 function setup() {
   createCanvas(500,500);
-  background("lightblue");
+  posVertical = 250;
 }
 
 function draw(){
-
-  fill("yellow");
-  circle(250,250,300);   // x, y , diametro
+  
+  if(posVertical < 400){
+   background("lightblue");
+    posVertical += 1;
+  }
+  else{
+     background("darkblue");
+  }
+  
+  fill("orange");
+  circle(250,posVertical,300);   // x, y , diametro
 
   fill("darkblue");
   rect(0,300,500,350);  // x, y, largura, altura
